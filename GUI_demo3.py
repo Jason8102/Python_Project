@@ -43,11 +43,12 @@ def tab2():#second page
     button_2.pack(side=RIGHT) 
     
 
-def back02(): #second page destroy
+def back02(): #second page destroy and rebuild tab1
     label2.destroy()
     button_1.destroy()
     button_2.destroy()
     tab1()
+
 def back02_1(): #second page destroy
     label2.destroy()
     button_1.destroy()
@@ -70,16 +71,135 @@ def tab3():# third page
     label3 = Label(root,text="This is thrid Tab",font=("Times_New_Roman",25))
     label3.pack(side=TOP)
     global button3
-    button3 = Button(root,text="BACK_3",font=("Times_New_Roman",25),activebackground="blue")
+    button3 = Button(root,text="BACK_3",font=("Times_New_Roman",25),activebackground="blue",command=back03)
     button3.pack(side=LEFT) 
     global button4
-    button4 = Button(root,text="NEXT_3",font=("Times_New_Roman",25),activebackground="red")
+    button4 = Button(root,text="NEXT_3",font=("Times_New_Roman",25),activebackground="red",command=tab4)
     button4.pack(side=RIGHT) 
 
 def back03():
     label3.destroy()
     button3.destroy()
     button4.destroy()
+    tab2()
+
+def back03_1():
+    label3.destroy()
+    button3.destroy()
+    button4.destroy()
+
+def tab4():
+    back03_1()
+    global label4
+    label4 = Label(root,text="This is fourth Tab",font=("Times_New_Roman",25))
+    label4.pack(side=TOP)
+    global button4
+    button4 = Button(root,text="BACK_4",font=("Times_New_Roman",25),activebackground="yellow",command=back04)
+    button4.pack(side=LEFT) 
+    global button5
+    button5 = Button(root,text="NEXT_4",font=("Times_New_Roman",25),activebackground="green",command=tab5)
+    button5.pack(side=RIGHT) 
+
+def back04():
+    label4.destroy()
+    button4.destroy()
+    button5.destroy()
+    tab3()
+
+def back04_1():
+    label4.destroy()
+    button4.destroy()
+    button5.destroy()
+
+def tab5():
+    back04_1()
+    global label5
+    label5 = Label(root,text="This is Fifth Tab",font=("Times_New_Roman",25))
+    label5.pack(side=TOP)
+    global button6
+    button6 = Button(root,text="BACK_5",font=("Times_New_Roman",25),activebackground="yellow",command=back05)
+    button6.pack(side=LEFT) 
+    global button7
+    button7 = Button(root,text="NEXT_5",font=("Times_New_Roman",25),activebackground="green",command= tab6)
+    button7.pack(side=RIGHT) 
+
+def back05():
+    label5.destroy()
+    button6.destroy()
+    button7.destroy()
+    tab4()
+
+def back05_1():
+    label5.destroy()
+    button6.destroy()
+    button7.destroy()
+
+def tab6():
+    back05_1()
+    global label6
+    label6 = Label(root,text="This is Sixth Tab",font=("Times_New_Roman",25))
+    label6.pack(side=TOP)
+    global button8
+    button8 = Button(root,text="BACK_6",font=("Times_New_Roman",25),activebackground="yellow",command=back06)
+    button8.pack(side=LEFT) 
+    global button9
+    button9 = Button(root,text="NEXT_6",font=("Times_New_Roman",25),activebackground="green",command=tab7)
+    button9.pack(side=RIGHT)
+
+def back06():
+    label6.destroy()
+    button8.destroy()
+    button9.destroy()
+    tab5()
+
+def back06_1():
+    label6.destroy()
+    button8.destroy()
+    button9.destroy()
+
+def tab7():
+    back06_1()
+    global label7
+    label7 = Label(root,text="This is Seventh Tab",font=("Times_New_Roman",25))
+    label7.pack(side=TOP)
+    global button10
+    button10 = Button(root,text="BACK_7",font=("Times_New_Roman",25),activebackground="red",command=back07)
+    button10.pack(side=LEFT) 
+    global button11
+    button11 = Button(root,text="NEXT_7",font=("Times_New_Roman",25),activebackground="green",command=tab8)
+    button11.pack(side=RIGHT)
+
+def back07():
+    label7.destroy()
+    button10.destroy()
+    button11.destroy()
+    tab6()
+
+def back07_1():
+    label7.destroy()
+    button10.destroy()
+    button11.destroy()
+
+def tab8():
+    back07_1()
+    global label8
+    label8 = Label(root,text="This is Eighth Tab",font=("Times_New_Roman",25))
+    label8.pack(side=TOP)
+    global button12
+    button12 = Button(root,text="BACK_8(Submit)",font=("Times_New_Roman",25),activebackground="red",command=back08)
+    button12.pack(side=BOTTOM) 
+
+def back08():
+    label8.destroy()
+    button12.destroy()
+    tab7()
+ 
+
+
+
+
+
+
 
 #def tab4():
 
