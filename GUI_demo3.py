@@ -45,8 +45,28 @@ def tab0(): # home page
     button0 = Button(root,text="Record",font=("Times_New_Roman",50),activebackground="blue",height= 500, width=500,command=tab1)
     button0.pack(side=LEFT) 
     global button_0
-    button_0 = Button(root,text="Listern",font=("Times_New_Roman",50),activebackground="red",height= 500,width=500)
+    button_0 = Button(root,text="Listern",font=("Times_New_Roman",50),activebackground="red",height= 500,width=500,command=tab_listern_1)
     button_0.pack(side=RIGHT) 
+
+def back_listerning_back_1():
+    label9.destroy()
+    button_3.destroy()
+    button_4.destroy()
+    tab0()
+
+def tab_listern_1():#listern page
+    back0()
+    global label9
+    label9 = Label(root,text="This is Listering Tab",font=("Times_New_Roman",25))
+    label9.pack(side=TOP)
+    global button_3
+    button_3 = Button(root,text="BACK",font=("Times_New_Roman",25),activebackground="blue",height= 50, width=100,command=back_listerning_back_1)
+    button_3.pack(side=TOP) 
+    button_3.place(x=10,y=10)
+    global button_4
+    button_4 = Button(root,text="Choose",font=("Times_New_Roman",25),activebackground="red",height= 50, width=100)
+    button_4.pack(side=BOTTOM) 
+
 
 def back01(): #first page destroy
     label1.destroy()
