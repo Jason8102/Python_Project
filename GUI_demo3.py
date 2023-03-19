@@ -1,6 +1,7 @@
 from tkinter import *
 from tkmacosx import *
 root = Tk()
+root.title("This Group B Project")
 root.minsize(height=480,width=800)
 
 # def tab1():
@@ -24,10 +25,39 @@ root.minsize(height=480,width=800)
 #     button1.pack(side=BOTTOM)
 # tab1()
 
+def back0():
+    label0.destroy()
+    button0.destroy()
+    button_0.destroy()
+    
+
+def back0_0():
+    label0.destroy()
+    button0.destroy()
+    button_0.destroy()
+    tab0()
+
+def tab0(): # home page
+    global label0
+    label0 = Label(root,text="Choose Record or Listerning",font=("Times_New_Roman",25))
+    label0.pack(side=TOP)
+    global button0
+    button0 = Button(root,text="Record",font=("Times_New_Roman",50),activebackground="blue",height= 500, width=500,command=tab1)
+    button0.pack(side=LEFT) 
+    global button_0
+    button_0 = Button(root,text="Listern",font=("Times_New_Roman",50),activebackground="red",height= 500,width=500)
+    button_0.pack(side=RIGHT) 
+
 def back01(): #first page destroy
     label1.destroy()
     button1.destroy()
     button2.destroy()
+
+def back01_01(): #first page destroy
+    label1.destroy()
+    button1.destroy()
+    button2.destroy()
+    tab0()
     
 
 def tab2():#second page
@@ -55,11 +85,12 @@ def back02_1(): #second page destroy
     button_2.destroy()
 
 def tab1(): # first page
+    back0()
     global label1
     label1 = Label(root,text="This is First Tab",font=("Times_New_Roman",25))
     label1.pack(side=TOP)
     global button1
-    button1 = Button(root,text="BACK",font=("Times_New_Roman",25),activebackground="blue")
+    button1 = Button(root,text="BACK",font=("Times_New_Roman",25),activebackground="blue",height= 50, width=100,command=back01_01)
     button1.pack(side=LEFT) 
     global button2
     button2 = Button(root,text="NEXT",font=("Times_New_Roman",25),activebackground="red",command= tab2)
@@ -209,8 +240,8 @@ def back08():
     # button2 = Button(root,text="NEXT",font=("Times_New_Roman",25),activebackground="red")
     # button2.pack(side=RIGHT) 
 
+tab0()
+#tab1()
 
-tab1()
-#tab2()
 
 root.mainloop()
